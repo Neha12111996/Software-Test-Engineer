@@ -1,0 +1,1993 @@
+import java.util.Iterator;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Honeywell 
+{
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Lenovo\\Desktop\\SeleniumJAR\\chromedriver_win32\\chromedriver.exe");
+		WebDriver w= new ChromeDriver();
+		
+		
+		w.get("https://sipnaengg.ac.in/");
+		Thread.sleep(5000);
+		
+		//About us started
+		
+		Actions A= new Actions(w);
+		Thread.sleep(5000);		
+		A.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[1]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js= (JavascriptExecutor) w;
+		Thread.sleep(3000);
+		js.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//Core Values Of Institution
+		
+		w.findElement(By.xpath("//a[contains(text(),'Core Values Of Institution')]")).click();
+		Thread.sleep(5000);
+		
+		//Why Sipna
+		
+		w.findElement(By.xpath("//a[contains(text(),'Why Sipna')]")).click();
+		Thread.sleep(3000);
+		
+		//why sipna links
+		
+		w.findElement(By.linkText("Best Engineering College in Vidarbha Maharashtra")).click();
+		Thread.sleep(5000);
+		w.findElement(By.linkText("Best Institute of Technology in Vidarbha")).click();
+		Thread.sleep(5000);
+		w.findElement(By.linkText("Best Management College in Amaravati")).click();
+		Thread.sleep(5000);
+		w.findElement(By.linkText("Top Engineering College In Maharashtra")).click();
+		Thread.sleep(5000);
+		w.findElement(By.linkText("Best Private Engineering College in Maharashtra")).click();
+		Thread.sleep(5000);
+		w.findElement(By.linkText("Engineering colleges with highest Placement")).click();
+		Thread.sleep(5000);
+		
+		//window handle to switch to child windows
+		Set <String> windows = w.getWindowHandles();
+		Iterator <String> it=windows.iterator();
+		
+		String pw=it.next();
+		String cw=it.next();
+		String cw1=it.next();
+		String cw2=it.next();
+		String cw3=it.next();
+		String cw4=it.next();
+		String cw5=it.next();
+		
+		w.switchTo().window(cw).close();
+		Thread.sleep(5000);
+		w.switchTo().window(cw1).close();
+		Thread.sleep(5000);
+		w.switchTo().window(cw2).close();
+		Thread.sleep(5000);
+		w.switchTo().window(cw3).close();
+		Thread.sleep(5000);
+		w.switchTo().window(cw4).close();
+		Thread.sleep(5000);
+		w.switchTo().window(cw5).close();
+		Thread.sleep(5000);
+		w.switchTo().window(pw);
+		
+		js.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(2000);
+		
+		//Board of directors start
+		
+		A.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[2]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for BOD scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js1= (JavascriptExecutor) w;
+		js1.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js1.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(2000);
+		
+		//Governing body starts
+		
+		A.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[3]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for GB scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js2= (JavascriptExecutor) w;
+		js2.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js2.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(2000);
+		
+		//dean institute starts
+		
+		A.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[4]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for dean institute scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js3= (JavascriptExecutor) w;
+		js3.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js3.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(2000);
+		
+		//dpc starts
+		
+		A.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[5]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for dpc scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js4= (JavascriptExecutor) w;
+		js4.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js4.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(2000);
+		
+		//organization chart starts
+		
+		A.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[6]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//for organization chart scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js5= (JavascriptExecutor) w;
+		js5.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js5.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(2000);
+		
+		//Administration starts
+		
+		A.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[2]/ul[1]/li[1]/ul[1]/li[7]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for Administration scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js6= (JavascriptExecutor) w;
+		js6.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js6.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(2000); 
+		
+		//departments started---computers--------------------------------------------------------------------------------------
+		
+		Actions A1= new Actions(w);
+		A1.moveToElement(w.findElement(By.xpath("//body[1]/div[1]/header[1]/div[2]/div[3]/nav[1]/ul[1]/li[3]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[3]/ul[1]/li[1]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for computers scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js7= (JavascriptExecutor) w;
+		js7.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js7.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js7.executeScript("window.scrollBy(0,100)");
+		Thread.sleep(5000);
+		
+		//for cse-about
+		
+		w.findElement(By.linkText("About Department")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.linkText("Vision & Mission")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.linkText("Meet our Faculties")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.linkText("Newsletter")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.linkText("Curriculum")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.linkText("Department Formats")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.linkText("Photo Gallery")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.linkText("Industrial Visit")).click();
+		Thread.sleep(2000);	
+		
+		//about
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(2000);	
+		
+		//PE-PO-PSO
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(2000);	
+		
+		//AP	
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(2000);	
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(2000);	
+		
+		//laboratry
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(2000);	
+		
+		//project	
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(2000);
+		
+		//placement	
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(2000);	
+		
+		//Click here
+		
+		w.findElement(By.linkText("Click Here")).click();
+		Thread.sleep(5000);	
+		
+		//for switching to placement window
+		
+		Set <String> windows1= w.getWindowHandles();
+		Iterator <String> it1=windows1.iterator();
+		
+		String pw1=it1.next();
+		String cw11=it1.next();
+		Thread.sleep(5000);
+
+		w.switchTo().window(cw11);
+		Thread.sleep(5000);
+		JavascriptExecutor js77=(JavascriptExecutor) w;
+		js77.executeScript("window.scrollBy(0,3000)");
+		Thread.sleep(5000);
+		w.close();
+		w.switchTo().window(pw1);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(2000);
+		
+		//SA
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(2000);	
+		w.findElement(By.xpath("//html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(2000);
+		
+		js7.executeScript("window.scrollBy(0,100)");
+		Thread.sleep(5000);
+		
+		//event and activity
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Guest Lectures")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Technical Workshop")).click();
+		Thread.sleep(2000);
+		w.findElement(By.xpath("//a[contains(text(),'Faculty Training Programs')]")).click();
+		Thread.sleep(2000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(2000);
+		
+		
+		//contacts
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[9]")).click();
+		Thread.sleep(2000);		
+		w.findElement(By.xpath("/htmliv//body/div[1]/div[2]/div[2]/div/ddiv/main/article/div/div[4]/div/div/div/div/div/div/div[2]/div/h2heading[9]")).click();
+		Thread.sleep(2000);
+		js7.executeScript("window.scrollBy(0,-1100)");
+		Thread.sleep(2000);		                  
+		js7.executeScript("window.scrollBy(0,-100)");
+		Thread.sleep(5000); 
+		
+		
+		//ElecNTC starts---------------------------------------------------------------------------------------------------------------------------------------
+		
+		A1.moveToElement(w.findElement(By.xpath("//body[1]/div[1]/header[1]/div[2]/div[3]/nav[1]/ul[1]/li[3]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[3]/ul[1]/li[2]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for entc scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js8= (JavascriptExecutor) w;
+		js8.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js8.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js8.executeScript("window.scrollBy(0,50)");
+		Thread.sleep(5000);
+		
+		//for entc about
+		
+		w.findElement(By.linkText("Vision & Mission")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Meet Our Faculties")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Newsletter")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Curriculum")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Department formats")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Photo Gallery")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Industrial Visit")).click();
+		Thread.sleep(2000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//peo-po
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		//AP
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+
+
+		js8.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(5000);
+		
+		//laboratory
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+
+		//project
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+
+		//placement
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		
+		//Click here
+		w.findElement(By.linkText("Click Here")).click();
+		Thread.sleep(5000);
+		
+		//for switching to placement window
+		
+				Set <String> windows2= w.getWindowHandles();
+				Iterator <String> it2=windows2.iterator();
+				
+				String pw2=it2.next();
+				String cw12=it2.next();
+				Thread.sleep(5000);
+				w.switchTo().window(cw12);
+				Thread.sleep(5000);
+				
+				JavascriptExecutor js88=(JavascriptExecutor) w;
+				js88.executeScript("window.scrollBy(0,3000)");
+				Thread.sleep(5000);
+				w.close();
+				w.switchTo().window(pw2);
+
+				
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		
+		
+		//event 
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+		
+		//for events inside
+		
+		w.findElement(By.linkText("Guest Lectures")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Technical Workshop")).click();
+		Thread.sleep(2000);
+		w.findElement(By.linkText("Faculty Training Programs")).click();
+		Thread.sleep(2000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+
+
+		//SA
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(3000);
+
+		//contacts
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[9]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[9]")).click();
+		Thread.sleep(3000);
+		
+		//For scroll up
+
+		js8.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(5000);
+		js8.executeScript("window.scrollBy(0,-1050)");
+		Thread.sleep(5000);
+		
+
+		//IT starts--------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		A1.moveToElement(w.findElement(By.xpath("//body[1]/div[1]/header[1]/div[2]/div[3]/nav[1]/ul[1]/li[3]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[3]/ul[1]/li[3]/a[1] ")).click();
+		Thread.sleep(5000);
+		
+		//for IT scrolling
+		
+			w.manage().window().maximize();
+				JavascriptExecutor js9= (JavascriptExecutor) w;
+				js9.executeScript("window.scrollBy(0,500)");
+				Thread.sleep(5000);
+				js9.executeScript("window.scrollBy(0,500)");
+				Thread.sleep(5000);
+				js9.executeScript("window.scrollBy(0,100)");
+				Thread.sleep(5000);
+				
+		//For IT-about
+				
+		w.findElement(By.linkText("Vision & Mission")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Meet Our Faculties")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Newsletter")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Curriculum")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Department formats")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Photo Gallery")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Industrial Visit")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For IT-PEO-PSO
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		
+		js9.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(5000);
+		
+		//For IT-Academics
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+
+		//For IT-Laboratory
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+
+		//For IT-Placement
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+		
+		//for click here
+		w.findElement(By.linkText("Click Here")).click();
+		
+		//for switching to IT placement window
+		
+		Set <String> windows3 = w.getWindowHandles();
+		Iterator <String> it3=windows3.iterator();
+		
+		String pw3=it3.next();
+		String cw13=it3.next();
+		Thread.sleep(5000);
+		w.switchTo().window(cw13);
+		Thread.sleep(5000);
+		
+		JavascriptExecutor js99=(JavascriptExecutor) w;
+		js99.executeScript("window.scrollBy(0,3000)");
+		Thread.sleep(5000);
+		w.close();
+		w.switchTo().window(pw3);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+
+		//For Projects
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+
+		//For StudentA
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+
+		//For Event and activities
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(3000);
+
+		//For Contacts
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[9]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[9]")).click();
+		Thread.sleep(3000);
+		
+		//For scroll up
+		
+		js9.executeScript("window.scrollBy(0,-1100)");
+		Thread.sleep(5000);
+		js9.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(5000);
+
+		//Civil engineering starts---------------------------------------------------------------------------------------------------------------------------------
+		
+		A1.moveToElement(w.findElement(By.xpath("//body[1]/div[1]/header[1]/div[2]/div[3]/nav[1]/ul[1]/li[3]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[3]/ul[1]/li[4]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for Civil scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js10= (JavascriptExecutor) w;
+		js10.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js10.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js10.executeScript("window.scrollBy(0,100)");
+		Thread.sleep(5000);
+		
+		//For civil-about
+		
+		w.findElement(By.linkText("Vission & Mission")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Meet our Faculties")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Newsletter")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Curriculum")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Departmental Formats")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Photo Gallery")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Industrial Visit")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Contact Us")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For civil-PEO-PSO
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		//For AcademicP
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+
+		//For Laboratory
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		
+
+		//For Projects
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+				
+
+		//For Placements
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		
+		//For click here
+		
+		w.findElement(By.linkText("Click Here")).click();
+		
+		//for switching to civil placement window
+		
+				Set <String> windows4 = w.getWindowHandles();
+				Iterator <String> it4=windows4.iterator();
+				
+				String pw4=it4.next();
+				String cw14=it4.next();
+				Thread.sleep(5000);
+				w.switchTo().window(cw14);
+				Thread.sleep(5000);
+
+				JavascriptExecutor js101=(JavascriptExecutor) w;
+				js101.executeScript("window.scrollBy(0,3000)");
+				Thread.sleep(5000);
+				w.close();
+				w.switchTo().window(pw4);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+						
+		//For Event and Activity
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+						
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+								
+		//For student achievement
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(3000);
+								
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(3000);
+						
+		//For scroll up
+		
+		js10.executeScript("window.scrollBy(0,-1100)");
+		Thread.sleep(5000);
+		
+		//For Mechanical dept--------------------------------------------------------------------------------------------------------------------------------------------
+		
+		A1.moveToElement(w.findElement(By.xpath("//body[1]/div[1]/header[1]/div[2]/div[3]/nav[1]/ul[1]/li[3]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[3]/ul[1]/li[5]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for Mechanical scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js11= (JavascriptExecutor) w;
+		js11.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js11.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js11.executeScript("window.scrollBy(0,100)");
+		Thread.sleep(5000);
+		
+		//For Mechanical-about
+		
+		w.findElement(By.linkText("Vision & Mission")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Meet our Faculties")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Newsletter")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Curriculam")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Department Formats")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Photo Gallery")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Industrial Visit")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Contact Us")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For PEO
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		//For Academics
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+
+		//For Laboratory
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		
+		//For Projects
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+
+		//For Placements
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		
+		//For click here
+		
+		w.findElement(By.linkText("Click Here")).click();
+		
+		//for switching to civil placement window
+		
+		Set <String> windows5 = w.getWindowHandles();
+		Iterator <String> it5=windows5.iterator();
+		
+		String pw5=it5.next();
+		String cw15=it5.next();
+		Thread.sleep(5000);
+		
+		w.switchTo().window(cw15);
+		Thread.sleep(5000);
+		
+		JavascriptExecutor js111=(JavascriptExecutor) w;
+		js111.executeScript("window.scrollBy(0,3000)");
+		Thread.sleep(5000);
+		w.close();
+		w.switchTo().window(pw5);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		
+
+		//For Event
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+		
+
+		//For student achievements
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/div[2]/div/h2heading[8]")).click();
+		Thread.sleep(3000);
+		
+		//For scroll up
+		
+		js11.executeScript("window.scrollBy(0,-1100)");
+		Thread.sleep(5000);
+
+		
+		
+		//For Science and humanities dept--------------------------------------------------------------------------------------------------------------------------
+		
+		A1.moveToElement(w.findElement(By.xpath("//body[1]/div[1]/header[1]/div[2]/div[3]/nav[1]/ul[1]/li[3]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[3]/ul[1]/li[6]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for Science and humanities scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js12= (JavascriptExecutor) w;
+		js12.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js12.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		js12.executeScript("window.scrollBy(0,100)");
+		Thread.sleep(5000);
+		
+		//For Science and humanities-about
+		
+		w.findElement(By.linkText("Vision & Mission")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Meet our Faculties")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Newsletters")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Curriculum")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Photo Gallery")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Contact us")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For PO
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		//For Academic programs
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		
+
+		//For Laboratory
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		
+
+		//For Event and activities
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+		
+
+		//For student achievement
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[2]/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		
+		//For scroll up
+		
+		js12.executeScript("window.scrollBy(0,-1100)");
+		Thread.sleep(5000);
+		
+		//MBA dept starts-----------------------------------------------------------------------------------------------------------------------------------------
+		
+		A1.moveToElement(w.findElement(By.xpath("//body[1]/div[1]/header[1]/div[2]/div[3]/nav[1]/ul[1]/li[3]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[3]/ul[1]/li[7]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//for MBA scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js13= (JavascriptExecutor) w;
+		js13.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		
+		//For MBA-about
+		
+		w.findElement(By.linkText("Meet Our Faculties")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Newsletter")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Curriculum")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Department formats")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Photogallery")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Industrial visit")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Alumni")).click();
+		Thread.sleep(3000);
+		w.findElement(By.linkText("Contact Us")).click();
+		Thread.sleep(3000);
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For PEO
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		//For Projects
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+
+		//For Placement
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		
+		//For click here
+		
+		w.findElement(By.linkText("Click Here")).click();
+		Thread.sleep(3000);
+		
+		//for switching to placement window
+		
+		Set <String> windows6 = w.getWindowHandles();
+		Iterator <String> it6=windows6.iterator();
+		
+		String pw6=it6.next();
+		String cw16=it6.next();
+		Thread.sleep(5000);
+		w.switchTo().window(cw16);
+		Thread.sleep(5000);
+		
+		JavascriptExecutor js131=(JavascriptExecutor) w;
+		js131.executeScript("window.scrollBy(0,3000)");
+		Thread.sleep(5000);
+		w.close();
+		w.switchTo().window(pw6);
+
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		
+		//For Event and activities
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+		
+		//For SA
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+
+		//For scroll up
+		
+		js13.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(5000);
+	
+		
+		
+		//Academics started----------------------------------------------------------------------------------------------------------------------------------------------
+		
+		Actions A2= new Actions(w);
+		A2.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/a[1]"))).perform();
+		Thread.sleep(5000);
+		
+		//For phd programme
+		
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/ul[1]/li[1]/a[1]")).click();
+		Thread.sleep(6000);
+		
+		//for phd programme scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js14= (JavascriptExecutor) w;
+		js14.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(5000);
+		
+		//For closing phd programme
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(5000);
+
+		//For photo gallery
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		//For Application form
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+				
+		//For SGBAU
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath(" /html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+				
+	    //For List of recognized
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[5]")).click();
+		Thread.sleep(3000);
+				
+	    //For supervisor
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[6]")).click();
+		Thread.sleep(3000);
+	    
+
+		//For sipna coet
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[7]")).click();
+		Thread.sleep(3000);
+	    
+		//For scroll up
+		
+		js14.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(5000);
+
+		//For Courses offered starts-----------------------------------------------------------------------------------------------------------------------------------
+		
+		A2.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/ul[1]/li[2]/a[1] ")).click();
+		Thread.sleep(3000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js15= (JavascriptExecutor) w;
+		js15.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//For Post graduate
+		
+		w.findElement(By.xpath("//li[contains(text(),'Post Graduate')]")).click();
+		Thread.sleep(3000);
+		
+		//For scrolling up
+		
+		js15.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//For admission procedure-------------------------------------------------------------------------------------------------------------------------------------------
+		
+		A2.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/ul[1]/li[3]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js16= (JavascriptExecutor) w;
+		js16.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//For scrolling up
+		
+		js16.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//For Academic activity calendar----------------------------------------------------------------------------------------------------------------------------------
+		
+		A2.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/ul[1]/li[4]/a[1]")).click();
+		Thread.sleep(3000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js17= (JavascriptExecutor) w;
+		js17.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//For Academic & Activity Calender First Year Engg. 2019-20
+		
+		w.findElement(By.xpath("//li[contains(text(),'Academic & Activity Calender First Year Engg. 2019')]")).click();
+		Thread.sleep(3000);
+		
+		//For Academic calendar 2019-20 for M.E
+		
+		w.findElement(By.xpath("//li[contains(text(),'Academic calendar 2019-20 for M.E')]")).click();
+		Thread.sleep(3000);
+
+		//For Academic Calendar 2019-20 for MBA
+		
+		w.findElement(By.xpath("//li[contains(text(),'Academic Calendar 2019-20 for MBA')]")).click();
+		Thread.sleep(3000);
+		
+		//For scrolling up
+		
+		js17.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//For Japanese language forum-----------------------------------------------------------------------------------------------------------------------------------
+		
+		A2.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/ul[1]/li[5]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js18= (JavascriptExecutor) w;
+		js18.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//For photo gallery
+		
+		w.findElement(By.linkText("Photo Gallery")).click();
+		Thread.sleep(3000);
+
+		//For Events 
+		
+		w.findElement(By.linkText("Events Activity")).click();
+		Thread.sleep(3000);
+
+		//For Important Link
+		
+		w.findElement(By.linkText("Important Link")).click();
+		Thread.sleep(3000);
+
+		//For  Contact Us
+		
+		w.findElement(By.linkText("Contact Us")).click();
+		Thread.sleep(3000);
+
+		//For scrolling up
+		
+		js18.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		//For LMS starts ------------------------------------------------------------------------------------------------------------------------------------------------------
+		A2.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/ul[1]/li[6]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		w.navigate().back();
+		
+		
+		//For Swayam-----------------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		A2.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/ul[1]/li[7]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js19= (JavascriptExecutor) w;
+		js19.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//For OBJECTIVE
+		
+		w.findElement(By.xpath("//span[contains(text(),'OBJECTIVE')]")).click();
+		Thread.sleep(3000);
+		
+		//For REGISTRATION
+		
+		w.findElement(By.xpath("//span[contains(text(),'REGISTRATION')]")).click();
+		Thread.sleep(3000);
+
+		//For scrolling up
+		
+		js19.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//For CSI student branch-------------------------------------------------------------------------------------------------------------------------------------------
+		
+		A2.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[4]/ul[1]/li[8]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js20= (JavascriptExecutor) w;
+		js20.executeScript("window.scrollBy(0,700)");
+		Thread.sleep(3000);
+		
+		//For Students Managing Committee
+		
+		w.findElement(By.xpath("//span[contains(text(),'Students Managing Committee')]")).click();
+		Thread.sleep(3000);
+
+		//For scrolling up
+		
+		js20.executeScript("window.scrollBy(0,-700)");
+		Thread.sleep(3000);
+	
+		
+		//Training and placement started-------------------------------------------------------------------------------------------------------------------------------
+		
+		Actions A3=new Actions(w);
+		A3.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/ul[1]/li[1]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js21= (JavascriptExecutor) w;
+		js21.executeScript("window.scrollBy(0,1300)");
+		Thread.sleep(3000);
+		
+		//For Dean I.I.I & C.R. and Coordinators 
+		
+		w.findElement(By.xpath("//a[contains(text(),'Dean I.I.I & C.R. and Coordinators')]")).click();
+		Thread.sleep(3000);
+
+		//For Downloads
+		
+		w.findElement(By.xpath("//a[contains(text(),'Downloads')]")).click();
+		Thread.sleep(3000);
+
+		//For scrolling up
+		
+		js21.executeScript("window.scrollBy(0,-1300)");
+		Thread.sleep(3000);
+		
+	
+		//Placement information starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A3.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/ul[1]/li[2]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js22= (JavascriptExecutor) w;
+		js22.executeScript("window.scrollBy(0,800)");
+		Thread.sleep(3000);
+		
+		//For Placement 2017-18
+		
+		w.findElement(By.xpath("//h4[contains(text(),'Placement 2017-18')]")).click();
+		Thread.sleep(3000);
+
+		//For Placement 2018-19
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/ul/li[3]/label/span/h4")).click();
+		Thread.sleep(3000);
+
+		//For Placement 2019-20
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[3]/div/div/div/div/div/div/ul/li[4]/label/span/h4")).click();
+		Thread.sleep(3000);
+		
+		//For scrolling up
+		
+		js22.executeScript("window.scrollBy(0,-800)");
+		Thread.sleep(3000);
+		
+		
+		//Internship starts-----------------------------------------------------------------------------------------------------------------------------------------
+		
+		A3.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/ul[1]/li[3]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js23= (JavascriptExecutor) w;
+		js23.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		js23.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		//Training and workshop starts-----------------------------------------------------------------------------------------------------------------------------
+		
+		A3.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/ul[1]/li[4]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js24= (JavascriptExecutor) w;
+		js24.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		js24.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+
+		//Our recruiters starts------------------------------------------------------------------------------------------------------------------
+		
+		A3.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[5]/ul[1]/li[5]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js25= (JavascriptExecutor) w;
+		js25.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		js25.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//Activities started------------------------------------------------------------------------------------------------------------------
+		
+		Actions A4= new Actions(w);
+		A4.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/ul[1]/li[1]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For NSS scrolling
+		
+				w.manage().window().maximize();
+				JavascriptExecutor js26= (JavascriptExecutor) w;
+				js26.executeScript("window.scrollBy(0,500)");
+				Thread.sleep(3000);
+				
+		//For Photo gallery18-19
+				
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div[1]/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div[1]/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		//For Photo gallery17-18
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div[1]/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div[1]/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		
+		//For Photo gallery19-20
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div[1]/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div[1]/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+
+		//For Scrolling up
+		
+		js26.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//For Vidyotan starts-------------------------------------------------------------------------------------------------------------------------------
+		
+		A4.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/ul[1]/li[2]/a[1] ")).click();
+		Thread.sleep(5000);
+		
+		//For Vidyotan scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js27= (JavascriptExecutor) w;
+		js27.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		js27.executeScript("window.scrollBy(0,100)");
+		Thread.sleep(3000);
+		
+		//For youth festival--------------------------------------------------------------------------------------------------------------------------------
+		
+		w.findElement(By.xpath("//body/div[@id='page']/div[@id='content']/div[@id='primary']/div[1]/div[1]/div[1]/main[1]/article[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[2]")).click();
+		Thread.sleep(3000);
+		
+		//For vidyotan---------------------------------------------------------------------------------------------------------------------------------------
+		
+		w.findElement(By.xpath("//body/div[@id='page']/div[@id='content']/div[@id='primary']/div[1]/div[1]/div[1]/main[1]/article[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/a[3]")).click();
+		Thread.sleep(3000);
+		
+		//For visit at vidyotan------------------------------------------------------------------------------------------------------------------------------
+		
+		w.findElement(By.xpath("//a[contains(text(),'Visit at VIDYOTAN')]")).click();
+		Thread.sleep(5000);
+
+		w.navigate().back();
+		
+		//For Scrolling up
+		
+		js27.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		js27.executeScript("window.scrollBy(0,-100)");
+		Thread.sleep(3000);
+		
+		
+		//For Innovator starts------------------------------------------------------------------------------------------------------------------------------
+		
+		A4.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/ul[1]/li[3]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js28= (JavascriptExecutor) w;
+		js28.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js28.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//For umang starts-------------------------------------------------------------------------------------------------------------------------------------------
+		
+		A4.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/ul[1]/li[4]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js29= (JavascriptExecutor) w;
+		js29.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js29.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		//For In-house project development starts------------------------------------------------------------------------------------------------------------------
+		
+		A4.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/ul[1]/li[5]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js30= (JavascriptExecutor) w;
+		js30.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//For cse
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For entc
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		
+
+		//For IT
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[3]")).click();
+		Thread.sleep(3000);
+				
+
+		//for mechanical
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div/div/div/div/div/div/div/div[2]/div/h2heading[4]")).click();
+		Thread.sleep(3000);
+
+		//For Scrolling up
+		
+		js30.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		//For Econtent starts--------------------------------------------------------------------------------------------------------------------------------------
+		
+		A4.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/ul[1]/li[6]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js31= (JavascriptExecutor) w;
+		js31.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(4000);
+		
+		//For Scrolling up
+		
+		js31.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(4000);
+		
+		//For youthfest-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A4.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/ul[1]/li[7]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js32= (JavascriptExecutor) w;
+		js32.executeScript("window.scrollBy(0,200)");
+		Thread.sleep(4000);
+		
+		//For Scrolling up
+		
+		js32.executeScript("window.scrollBy(0,-200)");
+		Thread.sleep(4000);
+		
+		//For yuvadin-----------------------------------------------------------------------------------------------------------------------------------------------
+		
+		A4.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[6]/ul[1]/li[8]/a[1]")).click();
+		Thread.sleep(5000);
+		
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js33= (JavascriptExecutor) w;
+		js33.executeScript("window.scrollBy(0,400)");
+		Thread.sleep(4000);
+		
+		//For Scrolling up
+		
+		js33.executeScript("window.scrollBy(0,-400)");
+		Thread.sleep(4000);
+	
+		//Student club starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		Actions A5=new Actions(w);
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		
+		//Art and craft starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[1]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js34= (JavascriptExecutor) w;
+		js34.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+		
+		//club infor
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div[1]/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//club committee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div[1]/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div[1]/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js34.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js34.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js34.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+	
+		//Carnival club starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[2]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js35= (JavascriptExecutor) w;
+		js35.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js35.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js35.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js35.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+			
+		//Social Activity Club starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[3]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js36= (JavascriptExecutor) w;
+		js36.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div[1]/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div[1]/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div[1]/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js36.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js36.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js36.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		//Sipna Readers Club starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[4]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js37= (JavascriptExecutor) w;
+		js37.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js37.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js37.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js37.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		//Competitive Exam Club starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[5]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js38= (JavascriptExecutor) w;
+		js38.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js38.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js38.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js38.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		//Sipnopreneur’s Club starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[6]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js39= (JavascriptExecutor) w;
+		js39.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js39.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js39.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js39.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//Techno-Vishkar Club starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[7]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js40= (JavascriptExecutor) w;
+		js40.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js40.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js40.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js40.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//Sipna Fitness Club starts-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[8]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js41= (JavascriptExecutor) w;
+		js41.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js41.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js41.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js41.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		
+		//Personality Development Club starts--------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[9]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js42= (JavascriptExecutor) w;
+		js42.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js42.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js42.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js42.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+		
+		//sipna nature club-------------------------------------------------------------------------------------------------------------------------------------
+		
+		A5.moveToElement(w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/a[1]"))).perform();
+		Thread.sleep(5000);
+		w.findElement(By.xpath("//header/div[2]/div[3]/nav[1]/ul[1]/li[7]/ul[1]/li[10]/a[1]")).click();
+		Thread.sleep(5000);
+
+		//For scrolling
+		
+		w.manage().window().maximize();
+		JavascriptExecutor js43= (JavascriptExecutor) w;
+		js43.executeScript("window.scrollBy(0,500)");
+		Thread.sleep(3000);
+
+		//For club info
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[1]")).click();
+		Thread.sleep(3000);
+
+		//For club commitee
+		
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+		w.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div/div/div/main/article/div/div[1]/div/div/div/div/div/div/div[2]/div/h2heading[2]")).click();
+		Thread.sleep(3000);
+
+		js43.executeScript("window.scrollBy(0,300)");
+		Thread.sleep(3000);
+		
+		//For Scrolling up
+		
+		js43.executeScript("window.scrollBy(0,-300)");
+		Thread.sleep(3000);
+		js43.executeScript("window.scrollBy(0,-500)");
+		Thread.sleep(3000);
+	
+	}
+
+}
